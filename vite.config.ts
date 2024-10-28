@@ -16,8 +16,12 @@ import LinkAttributes from 'markdown-it-link-attributes'
 import Unocss from 'unocss/vite'
 import Shiki from 'markdown-it-shiki'
 import VueMacros from 'unplugin-vue-macros/vite'
+import { ElementPlusResolver } from 'unplugin-vue-components/resolvers'
 
 export default defineConfig({
+  esbuild: {
+    charset: 'utf8',
+  },
   resolve: {
     alias: {
       '~/': `${path.resolve(__dirname, 'src')}/`,
@@ -26,7 +30,6 @@ export default defineConfig({
 
   plugins: [
     Preview(),
-
     VueMacros({
       plugins: {
         vue: Vue({
@@ -46,6 +49,7 @@ export default defineConfig({
 
     // https://github.com/antfu/unplugin-auto-import
     AutoImport({
+      resolvers: [ElementPlusResolver()],
       imports: [
         'vue',
         'vue-router',
@@ -64,6 +68,7 @@ export default defineConfig({
 
     // https://github.com/antfu/unplugin-vue-components
     Components({
+      resolvers: [ElementPlusResolver()],
       // allow auto load markdown components under `./src/components/`
       extensions: ['vue', 'md'],
       // allow auto import and register components used in markdown

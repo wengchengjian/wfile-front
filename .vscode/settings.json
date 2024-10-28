@@ -6,10 +6,12 @@
   "i18n-ally.sortKeys": true,
   "prettier.enable": false,
   "editor.codeActionsOnSave": {
-    "source.fixAll.eslint": true
+    "source.fixAll.eslint": "explicit"
   },
   "files.associations": {
     "*.css": "postcss"
   },
-  "editor.formatOnSave": false
+  "editor.formatOnSave": false,
+  "commentTranslate.hover.enabled": false,
+  "vue3snippets.enable-compile-vue-file-on-did-save-code": true
 }

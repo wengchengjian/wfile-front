@@ -23,6 +23,7 @@ export default defineConfig({
     }),
     presetTypography(),
     presetWebFonts({
+      provider: 'fontshare',
       fonts: {
         sans: 'DM Sans',
         serif: 'DM Serif Display',

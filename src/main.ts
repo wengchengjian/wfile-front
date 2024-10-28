@@ -4,7 +4,7 @@ import Previewer from 'virtual:vue-component-preview'
 import App from './App.vue'
 import type { UserModule } from './types'
 import generatedRoutes from '~pages'
-
+import 'element-plus/dist/index.css'
 import '@unocss/reset/tailwind.css'
 import './styles/main.css'
 import 'uno.css'
